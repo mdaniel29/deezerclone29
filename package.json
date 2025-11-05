@@ -9,18 +9,24 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@prisma/client": "^6.18.0",
+    "init": "^0.1.2",
+    "mysql": "^2.18.1",
+    "next": "16.0.1",
+    "npx": "^3.0.0",
+    "prisma": "^6.18.0",
     "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "next": "16.0.1"
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "dotenv": "^17.2.3",
     "eslint": "^9",
-    "eslint-config-next": "16.0.1"
+    "eslint-config-next": "16.0.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
