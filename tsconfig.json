@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,7 +23,7 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+       "@/*": ["./*"], "@lib/*": ["./lib/*"]
     }
   },
   "include": [
@@ -28,7 +32,10 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
-, "app/api/albums/[id]/page.tsx.bad"  ],
-  "exclude": ["node_modules"]
+    "**/*.mts",
+    "app/api/albums/[id]/page.tsx.bad"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

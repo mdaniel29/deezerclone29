@@ -1,13 +1,6 @@
-//import { prisma } from "@/lib/prisma";
+import prisma from "@lib/prisma"
 
-import { Album } from "../generated/prisma/client";
-import { prisma } from "../page";
 import RenderImage from "./RenderImage";
-
-//import { PrismaClient } from "@prisma/client";
-
-//export const prisma = new PrismaClient;
-
 
 export default async function AlbumsPage() {
 

@@ -22,7 +22,7 @@ const SearchBar = ({ onSearch }: ISearch) => {
 
     return (
         <>
-            <div className='flex bg-yellow-100 flex-wrap justify-end'>
+            <div className='flex flex-col flex-wrap'>
 
                 <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '10px' }}>
                     
@@ -31,7 +31,7 @@ const SearchBar = ({ onSearch }: ISearch) => {
                             placeholder="Rechercher..."
                             value={searchTerm}
                             onChange={handleInputChange}
-                            style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
+                            style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc', background: '#eed' }}
                         />
                     
                     

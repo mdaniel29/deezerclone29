@@ -1,7 +1,5 @@
-//import { prisma } from "@/lib/prisma";
-//import { prisma } from "@/app/albums/page";
 
-import { prisma } from "@/app/page";
+import prisma from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
 export async function GET(req: Request, { params }: { params: Promise<{ id: string }> }) {

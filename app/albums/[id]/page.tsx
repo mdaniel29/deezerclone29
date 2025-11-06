@@ -1,5 +1,4 @@
-
-import { prisma } from "@/app/page";
+import prisma from "@/lib/prisma";
 import TracksList from "./TracksList"
 
 export default async function AlbumPage({ params }: { params: { id: string } }) {

@@ -48,3 +48,20 @@ Réaliser une mini-application de streaming musical (sans son), permettant :
 
 
 ---
+
+## NOTES
+
+- création fichier global.d.ts à la racine (sinon pb css / TailWind)
+- Dans tsconfig.json :
+```typescript
+ "paths": {
+    "@/*": ["./*"],
+    "@lib/*": ["./lib/*"]
+}
+```
+- créa fichier pour PrismaClient global : ./lib/prisma.ts
+- import de prisma dans les fichiers :
+```typescript
+import prisma from "@lib/prisma"
+```
+
