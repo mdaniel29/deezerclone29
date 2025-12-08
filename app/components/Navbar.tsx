@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
 
 
     return (
-        <nav className="bg-red-950 text-white">
+        <nav className="bg-orange-950/60 text-white">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="text-lg font-bold">Deezer Clone</div>
                 <ul className="flex space-x-6">
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
                             </Link>
                         </li>
                     )}
-                   
+
                 </ul>
             </div>
         </nav>

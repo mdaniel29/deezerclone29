@@ -7,3 +7,14 @@ export async function GET() {
 	return NextResponse.json(albums);
 }
 
+export async function POST(request: NextRequest) {
+  const data = await request.json();
+  const album = await prisma.album.create({
+    data: {
+      title: data.title,
+      artist: data.artist,
+      cover: data.cover,
+    },
+  });
+  return NextResponse.json({ album }, { status: 201 });
+}
