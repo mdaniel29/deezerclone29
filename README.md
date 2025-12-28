@@ -64,4 +64,4 @@ Réaliser une mini-application de streaming musical (sans son), permettant :
 ```typescript
 import prisma from "@lib/prisma"
 ```
-
+**28/12/25 : MAJ paramètres connectivité BDD**
