@@ -65,3 +65,4 @@ Réaliser une mini-application de streaming musical (sans son), permettant :
 import prisma from "@lib/prisma"
 ```
 **28/12/25 : MAJ paramètres connectivité BDD**
+**29/12/25 : npm update, ncu -u, prisma generate**
