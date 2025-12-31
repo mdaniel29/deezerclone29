@@ -1,6 +1,7 @@
 import prisma from "@lib/prisma"
 
 import RenderImage from "./RenderImage";
+import { AlbumType } from "../types";
 
 export default async function AlbumsPage() {
 
@@ -18,7 +19,7 @@ export default async function AlbumsPage() {
         <div>
             <h1 className="text-2xl mb-4">Albums</h1>
             <ul className="">
-                {albums && albums.map(a => (
+                {albums && albums.map((a: AlbumType) => (
                     <li key={a.id} className="m-2 mb-3">
                         <a href={`/albums/${a.id}`} className="hover:underline text-blue-700 mb-2">{a.title} — {a.artist}</a>
                         {a.id && <RenderImage key={a.id} urlImg={"/images/"+a.cover} />}

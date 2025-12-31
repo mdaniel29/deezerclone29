@@ -1,6 +1,4 @@
 
-//export const prisma = new PrismaClient;
-
 export default function Home() {
   return (
     <div className="flex min-h-fit items-center justify-center bg-zinc-200 font-sans dark:bg-black">
