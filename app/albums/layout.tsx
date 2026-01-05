@@ -21,9 +21,11 @@ export default function AlbumsLayout({ children }: Readonly<{ children: ReactNod
     return (
 
         <div className="flex">
-            <nav className="w-1/4 p-4 border-r">
-                <h2 className="text-xl font-bold mb-2">🎵 Deezer Clone</h2>
-                <a href="/albums">Albums</a>
+            <nav className="w-1/4 p-4 border-r py-8">
+                <h2 className="sm:text-xl font-bold mb-2">🎵 Deezer Clone</h2>
+                <div className="py-4">
+                <a href="/albums" className=" text-blue-500">Albums</a>
+                </div>
                 <SearchBar onSearch={handleSearch} />
             </nav>
             <main className="flex-1 p-4">{children}</main>

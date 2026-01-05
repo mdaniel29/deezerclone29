@@ -37,7 +37,7 @@ const SearchBar = ({ onSearch }: ISearch) => {
                     
                         <button
                             type="submit"
-                            style={{ padding: '8px 16px', borderRadius: '4px', backgroundColor: '#007bff', color: 'white', border: 'none' }}
+                            style={{ padding: '8px 16px', borderRadius: '4px', backgroundColor: '#8f716a', color: 'white', border: 'none' }}
                         >
                             Rechercher
                         </button>
