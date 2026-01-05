@@ -1,3 +1,7 @@
+
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 import prisma from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -19,4 +23,3 @@ export async function POST(request: NextRequest) {
   return NextResponse.json({ album }, { status: 201 });
 }
 
-export const runtime = "nodejs";
