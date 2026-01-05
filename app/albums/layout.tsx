@@ -23,12 +23,16 @@ export default function AlbumsLayout({ children }: Readonly<{ children: ReactNod
         <div className="flex">
             <nav className="w-1/4 p-4 border-r py-8">
                 <h2 className="sm:text-xl font-bold mb-2">🎵 Deezer Clone</h2>
+                <span className="text-sm text-gray-300">albums/layout.tsx : navigation commune</span>
                 <div className="py-4">
                 <a href="/albums" className=" text-blue-500">Albums</a>
                 </div>
                 <SearchBar onSearch={handleSearch} />
             </nav>
-            <main className="flex-1 p-4">{children}</main>
+            <main className="flex-1 p-4">
+                <span className="text-sm text-gray-300">albums/layout.tsx - MAIN PART : avec "children"</span>
+                {children}
+                </main>
         </div>
     );
 }
