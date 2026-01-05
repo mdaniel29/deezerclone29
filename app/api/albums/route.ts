@@ -18,3 +18,5 @@ export async function POST(request: NextRequest) {
   });
   return NextResponse.json({ album }, { status: 201 });
 }
+
+export const runtime = "nodejs";

@@ -17,3 +17,5 @@ export async function GET(req: Request, {params}: {params: Promise<{id : string}
     return NextResponse.redirect('http://127.0.0.1:3000/albums'); // TODO: mettre du process.env
   }
 }
+
+export const runtime = "nodejs";
