@@ -2,7 +2,10 @@
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-import prisma from "@/lib/prisma";
+import { getPrisma } from "@/lib/getprisma";
+//import prisma from "@/lib/prisma";
+const prisma = await getPrisma();
+
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET() {

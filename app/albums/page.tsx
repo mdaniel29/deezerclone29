@@ -1,4 +1,6 @@
-import prisma from "@lib/prisma"
+import { getPrisma } from "@/lib/getprisma";
+//import prisma from "@/lib/prisma";
+const prisma = await getPrisma();
 
 import RenderImage from "./RenderImage";
 import { AlbumType } from "../types";

@@ -8,8 +8,6 @@ const Navbar: React.FC = () => {
 
     const [isAdmin, setIsAdmin] = useState<boolean>(false);
 
-
-
     return (
         <nav className="bg-orange-950/60 text-white">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
