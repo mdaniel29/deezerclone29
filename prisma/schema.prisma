@@ -6,8 +6,8 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../app/generated/prisma"
-  engineType = "library"
+  //output   = "../app/generated/prisma"
+  //engineType = "library"
   //shadowDatabaseUrl = env("SHADOW_DATABASE_URL")      // mysql shadow DB
 }
 

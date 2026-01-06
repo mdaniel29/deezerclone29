@@ -2,14 +2,16 @@
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-import { getPrisma } from "@/lib/getprisma";
-//import prisma from "@/lib/prisma";
-const prisma = await getPrisma();
+//import { getPrisma } from "@/lib/getprisma";
+import { getPrisma } from "@/lib/prisma";
+//const prisma = await getPrisma();
 
 import { NextResponse } from "next/server";
 
 export async function GET(req: Request, {params}: {params: Promise<{id : string}>}) {
   const {id} = await params
+  const prisma = await getPrisma();
+  
   try {
     const tracks = await prisma.track.findMany({
       //where: { albumId: Number(params.id) },

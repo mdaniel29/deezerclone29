@@ -1,11 +1,10 @@
-import { getPrisma } from "@/lib/getprisma";
-//import prisma from "@/lib/prisma";
-const prisma = await getPrisma();
-
+import { getPrisma } from "@/lib/prisma";
 import RenderImage from "./RenderImage";
 import { AlbumType } from "../types";
 
 export default async function AlbumsPage() {
+
+    const prisma = await getPrisma();
 
     async function getImage(albumId: number): Promise<string> {
         const albumImg = await prisma.album.findFirst({ where: { id: albumId }, select: { cover: true } })
@@ -14,7 +13,6 @@ export default async function AlbumsPage() {
         const image = `/images/${albumImg.cover}`;
         return image;
     }
-
 
     const albums = await prisma.album.findMany();
     return (

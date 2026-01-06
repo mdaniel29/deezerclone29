@@ -1,7 +1,8 @@
-import prisma from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import TracksList from "./TracksList"
 
 export default async function AlbumPage({ params }: { params: { id: string } }) {
+    const prisma= await getPrisma();
     const { id } = await params;
     const album = await prisma.album.findUnique({
         where: { id: Number(id) },

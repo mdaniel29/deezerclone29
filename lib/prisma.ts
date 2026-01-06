@@ -1,9 +1,12 @@
-import { PrismaMariaDb } from "@prisma/adapter-mariadb";
 import { PrismaClient } from "@prisma/client";
-//import { PrismaClient } from "@/app/generated/prisma";
+import { PrismaMariaDb } from "@prisma/adapter-mariadb";
 	
-const globalForPrisma = global as unknown as { prisma: PrismaClient }
+const globalForPrisma = global as unknown as { prisma: PrismaClient | undefined}
 
+export async function getPrisma() {
+  if (globalForPrisma.prisma) {
+    return globalForPrisma.prisma;
+  }
 
 const adapter = new PrismaMariaDb({
   host: process.env.DATABASE_HOST!,
@@ -12,9 +15,13 @@ const adapter = new PrismaMariaDb({
   password: process.env.DATABASE_PASSWORD!,
   database: process.env.DATABASE_NAME!,
 })
-
-const prisma = globalForPrisma.prisma || new PrismaClient({adapter})
+const prisma = new PrismaClient({adapter});
+//const prisma = globalForPrisma.prisma || new PrismaClient({adapter})
+//const prisma = globalForPrisma.prisma ?? new PrismaClient().$extends(withAccelerate());
 
 if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+return prisma;
+}
 
-export default prisma
+// 06/01/26 : IMPORTANT : ne pas exporter prisma directement.
+//export default prisma
