@@ -11,7 +11,7 @@ export default defineConfig({
   datasource: {
      url: env("DATABASE_URL"),
      shadowDatabaseUrl: env("SHADOW_DATABASE_URL"),
-      /*
+     /* 
       adapter: {
       host: env.DATABASE_HOST,
       port: parseInt(env.DATABASE_PORT || "3306"),

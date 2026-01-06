@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 import { getPrisma } from "@/lib/prisma";
 import TracksList from "./TracksList"
 

@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 import { getPrisma } from "@/lib/prisma";
 import RenderImage from "./RenderImage";
 import { AlbumType } from "../types";
