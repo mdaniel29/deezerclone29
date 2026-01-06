@@ -1,4 +1,7 @@
 
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 import prisma from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
@@ -18,4 +21,3 @@ export async function GET(req: Request, {params}: {params: Promise<{id : string}
   }
 }
 
-export const runtime = "nodejs";
