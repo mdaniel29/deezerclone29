@@ -1,24 +1,16 @@
-import { defineConfig, env} from "prisma/config";
-//import { defineConfig} from "prisma/config";
-//import {env} from "process";
-import "dotenv/config";
+import 'dotenv/config'
+//import type { PrismaConfig } from "prisma";
+//import { env } from "prisma/config";
+import {defineConfig, env} from "@prisma/config";
 
 export default defineConfig({
   schema: "prisma/schema.prisma",
-  migrations: {
+ migrations: {
     path: "prisma/migrations",
   },
-  datasource: {
-     url: env("DATABASE_URL"),
-     shadowDatabaseUrl: env("SHADOW_DATABASE_URL"),
-     /* 
-      adapter: {
-      host: env.DATABASE_HOST,
-      port: parseInt(env.DATABASE_PORT || "3306"),
-      user: env.DATABASE_USER,
-      password: env.DATABASE_PASSWORD,
-      database: env.DATABASE_NAME,
-    },
-    */
-  },
-});
+  datasource: { 
+    url: env("DATABASE_URL"),
+    shadowDatabaseUrl: env("SHADOW_DATABASE_URL_PG") 
+  }
+})
+

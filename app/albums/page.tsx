@@ -1,12 +1,13 @@
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
-import { getPrisma } from "@/lib/prisma";
+//import { getPrisma } from "@/lib/prisma";
 import RenderImage from "./RenderImage";
 import { AlbumType } from "../types";
+import prisma from "@/lib/prisma";
 
 export default async function AlbumsPage() {
 
-    const prisma = await getPrisma();
+    //const prisma = await getPrisma();
 
     async function getImage(albumId: number): Promise<string> {
         const albumImg = await prisma.album.findFirst({ where: { id: albumId }, select: { cover: true } })

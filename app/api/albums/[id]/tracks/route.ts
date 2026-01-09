@@ -1,15 +1,12 @@
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
-
-//import { getPrisma } from "@/lib/getprisma";
-import { getPrisma } from "@/lib/prisma";
-//const prisma = await getPrisma();
-
+import prisma from "@/lib/prisma";
+//import { getPrisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
 export async function GET(req: Request, {params}: {params: Promise<{id : string}>}) {
   const {id} = await params
-  const prisma = await getPrisma();
+  //const prisma = await getPrisma();
 
   try {
     const tracks = await prisma.track.findMany({
