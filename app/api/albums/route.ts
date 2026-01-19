@@ -1,6 +1,8 @@
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 import prisma from "@/lib/prisma";
+// "@/un_chemin/etc"    => alias path, souvent @ = dossier racine du projet
+
 //import { getPrisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
