@@ -1,4 +1,4 @@
-import 'dotenv/config'
+import 'dotenv/config' // redondant, source de bugs d'après Mistral ? TODO: check 
 //import type { PrismaConfig } from "prisma";
 //import { env } from "prisma/config";
 import {defineConfig, env} from "@prisma/config";

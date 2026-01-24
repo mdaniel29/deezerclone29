@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 
 export default function AlbumsLayout({ children }: Readonly<{ children: ReactNode }>) {
 
+    
     async function handleSearch(term: string) {
         try {
             const f = await fetch(`/api/albums?search=${term}`);

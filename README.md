@@ -66,3 +66,5 @@ import prisma from "@lib/prisma"
 ```
 **28/12/25 : MAJ paramètres connectivité BDD**
 **29/12/25 : npm update, ncu -u, prisma generate**
+**24/01/26 : ajout @utils/supabase/server.ts - npm i @supabase/ssr**
+**24/01/26 : ajout @utils/supabase/middleware.ts**
