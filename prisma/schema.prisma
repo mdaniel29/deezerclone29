@@ -8,7 +8,7 @@ datasource db {
 }
 
 model album {
-  id     BigInt  @id(map: "idx_18608_primary") @default(autoincrement())
+  id     Int  @id(map: "idx_18608_primary") @default(autoincrement())
   title  String  @db.VarChar(191)
   artist String  @db.VarChar(191)
   cover  String  @db.VarChar(191)
@@ -16,10 +16,10 @@ model album {
 }
 
 model track {
-  id       BigInt @id(map: "idx_18615_primary") @default(autoincrement())
+  id       Int @id(map: "idx_18615_primary") @default(autoincrement())
   title    String @db.VarChar(191)
-  duration BigInt
-  albumid  BigInt
+  duration Int
+  albumid  Int
   album    album  @relation(fields: [albumid], references: [id])
 
   @@index([albumid], map: "idx_18615_track_albumid_fkey")
