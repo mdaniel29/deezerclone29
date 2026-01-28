@@ -11,7 +11,7 @@ export async function GET(req: Request, {params}: {params: Promise<{id : string}
   try {
     const tracks = await prisma.track.findMany({
       //where: { albumId: Number(params.id) },
-      where: { albumId: Number(id) },
+      where: { albumid: Number(id) },
     });
     return NextResponse.json(tracks);
   }
