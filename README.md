@@ -70,3 +70,4 @@ import prisma from "@lib/prisma"
 **24/01/26 : ajout @utils/supabase/middleware.ts**
 **27/01/26 : Migration MariaDB => Supabase via SSL, à partir du VPS HostArmada avec pgloader**
 **28/01/26 : modif variables d'environnement pour Vercel / Supabase : trackink pool** 
+**28/01/26 : rebasculé en Direct Connection (not transaction spooler)**
