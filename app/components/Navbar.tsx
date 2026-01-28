@@ -9,8 +9,8 @@ const Navbar: React.FC = () => {
     const [isAdmin, setIsAdmin] = useState<boolean>(false);
 
     return (
-        <nav className="bg-orange-950/60 text-white">
-            <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <nav className="bg-green-950/60 text-white">
+            <div className="container mx-auto px-4 py-2 flex justify-between items-center">
                 <div className="text-lg font-bold">Deezer Clone</div>
                 <ul className="flex space-x-6">
                     <li>
