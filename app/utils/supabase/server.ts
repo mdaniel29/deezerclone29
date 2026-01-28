@@ -2,10 +2,16 @@
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
+//const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+//const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
 
+// ajout 28/01/26
+export const cookieStore = cookies();
+
 export const createClient = async (cookieStore: ReturnType<typeof cookies>) => {
+    console.log("supabaseURL : ", supabaseUrl)
     return createServerClient(
         supabaseUrl!,
         supabaseKey!,
