@@ -68,3 +68,5 @@ import prisma from "@lib/prisma"
 **29/12/25 : npm update, ncu -u, prisma generate**
 **24/01/26 : ajout @utils/supabase/server.ts - npm i @supabase/ssr**
 **24/01/26 : ajout @utils/supabase/middleware.ts**
+**27/01/26 : Migration MariaDB => Supabase via SSL, à partir du VPS HostArmada avec pgloader**
+**28/01/26 : modif variables d'environnement pour Vercel / Supabase : trackink pool** 
